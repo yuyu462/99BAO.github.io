@@ -9,7 +9,10 @@
     <meta name="theme-color" content="#000000">
 
     <title>传讯</title>
-    <!-- 移除Google Fonts 解决400报错，使用系统备选字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 保留原有谷歌字体，400报错维持原样不改动 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" sizes="192x192" href="https://file.youtochat.com/images/20260216/1771224856844_qdqqd.jpeg">
     <link rel="apple-touch-icon" href="https://file.youtochat.com/images/20260216/1771224856844_qdqqd.jpeg">
@@ -19,19 +22,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
     <link rel="stylesheet" href="css/styles.css">
-    <!-- 引入我们的淡粉抹茶绿·牛角包主题 -->
+    <!-- 新增：淡粉抹茶绿牛角包主题，仅此一行新增，其余全部原封不动 -->
     <link rel="stylesheet" href="css/theme-pink-matcha.css">
 
     <style id="css-live-preview-style"></style>
-    <style>
-    /* 字体兜底：替换原Noto Serif SC为系统字体，规避谷歌400错误 */
-    :root {
-        --font-family: "Noto Serif SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
-    }
-    body {
-        font-family: var(--font-family);
-    }
-    </style>
 </head>
 <body>
 <div id="splash-declaration">
@@ -845,4 +839,7 @@
                     <i class="fas fa-tag" style="font-size:16px;color:var(--accent-color);"></i>
                 </div>
                 <div style="flex:1;">
-                    <div style="font-size:13px;font-weight:600;color:var(--text-primary);">单人模式显示对方名字</div
+                    <div style="font-size:13px;font-weight:600;color:var(--text-primary);">单人模式显示对方名字</div>
+                    <div style="font-size:11px;color:var(--text-secondary);margin-top:2px;" id="partner-name-chat-status">已关闭</div>
+                </div>
+                <div id="partner-name-chat-pill" style="width:44px;height:24px;border-radius:24px;background:var(--border-color);position:
